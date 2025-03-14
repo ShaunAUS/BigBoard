@@ -1,3 +1,2 @@
 
-# Multimodule-template
 # big-board
