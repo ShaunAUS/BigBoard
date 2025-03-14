@@ -8,7 +8,7 @@ include(
     "service:comment",
     "service:article-read",
 
-    "common",
+    "common:snowflake",
 )
 
 pluginManagement {
