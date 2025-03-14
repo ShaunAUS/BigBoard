@@ -7,7 +7,7 @@ include(
     "service:view",
     "service:comment",
     "service:article-read",
-
+    "storage:db",
     "common:snowflake",
 )
 

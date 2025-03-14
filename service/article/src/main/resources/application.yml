@@ -1,2 +1,9 @@
+spring:
+  application:
+    name: big-board
+  config:
+    import:
+      - db.yml
+
 server:
   port: 9000
