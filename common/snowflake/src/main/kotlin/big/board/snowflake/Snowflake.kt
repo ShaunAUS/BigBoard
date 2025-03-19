@@ -1,7 +1,9 @@
-package big.board
+package big.board.snowflake
 
+import org.springframework.stereotype.Component
 import kotlin.random.Random
 
+@Component
 class Snowflake {
     companion object {
         private const val UNUSED_BITS = 1
