@@ -1,5 +1,6 @@
 package big.board.comment.service
 
+import big.board.PageLimitCalculator
 import big.board.dto.comment.reesponse.CommentPageResponse
 import big.board.dto.comment.reesponse.CommentResponse
 import big.board.dto.comment.request.CommentCreateRequest

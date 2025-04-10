@@ -1,5 +1,6 @@
 package big.board.service
 
+import big.board.PageLimitCalculator
 import big.board.dto.article.request.ArticleCreateRequest
 import big.board.dto.article.request.ArticleUpdateRequest
 import big.board.dto.article.response.ArticlePageResponse

@@ -1,5 +1,6 @@
 dependencies {
     implementation(project(":storage:db"))
+    implementation(project(":global"))
     implementation(project(":common:snowflake"))
     implementation("org.springframework.boot:spring-boot-starter-web")
     // 트랜잭션 사용을 위한 추가

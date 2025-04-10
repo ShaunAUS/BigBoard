@@ -1,6 +1,5 @@
 package big.board
 
-import big.board.service.PageLimitCalculator
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
