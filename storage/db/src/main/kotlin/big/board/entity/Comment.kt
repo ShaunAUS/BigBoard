@@ -15,7 +15,7 @@ class Comment(
     createAt: LocalDateTime,
 
     @Id
-    val commentId: Long? = null,
+    val commentId: Long,
 ) {
     var content: String = content
         protected set
@@ -35,7 +35,7 @@ class Comment(
             return Comment(
                 commentId = commentId,
                 content = commentCreateRequest.content,
-                parentCommentId = parentComment?.commentId ?: commentId,
+                parentCommentId = parentComment?.commentId ?: commentId, // parent가 없으면 자기자신 commentId사용
                 articleId = commentCreateRequest.articleId,
                 writerId = commentCreateRequest.writerId,
                 isDeleted = false,

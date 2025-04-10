@@ -49,7 +49,7 @@ class CommentService(
         commentRepository.delete(comment)
 
         if (hasParentComment(comment)) {
-            commentRepository.findById(comment.commentId!!)
+            commentRepository.findById(comment.commentId)
                 .filter { isNotDeleted(it) }
                 .filter { hasNotChildrentComment(it) }
                 .ifPresent { commentRepository.delete(it) }

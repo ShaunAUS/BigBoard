@@ -15,7 +15,7 @@ data class CommentResponse(
     companion object {
         fun of(comment: Comment): CommentResponse {
             return CommentResponse(
-                commentId = comment.commentId!!,
+                commentId = comment.commentId,
                 content = comment.content,
                 parentCommentId = comment.parentCommentId,
                 articleId = comment.articleId,

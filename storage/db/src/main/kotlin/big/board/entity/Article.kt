@@ -9,7 +9,7 @@ import java.time.LocalDateTime
 @Entity
 class Article(
     @Id
-    val articleId: Long? = null,
+    val articleId: Long,
     title: String,
     content: String,
     boardId: Long, // shard key
