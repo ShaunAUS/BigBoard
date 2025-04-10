@@ -1,2 +1,9 @@
+spring:
+  application:
+    name: comment
+  config:
+    import:
+      - comment.yml
+
 server:
   port: 9001
