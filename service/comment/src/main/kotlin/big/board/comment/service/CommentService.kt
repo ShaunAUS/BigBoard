@@ -1,5 +1,6 @@
 package big.board.comment.service
 
+import big.board.dto.comment.reesponse.CommentPageResponse
 import big.board.dto.comment.reesponse.CommentResponse
 import big.board.dto.comment.request.CommentCreateRequest
 import big.board.entity.Comment
@@ -28,6 +29,25 @@ class CommentService(
         return CommentResponse.of(commentRepository.findById(commentId).orElseThrow())
 
     }
+
+    fun readAll(articleId: Long, page: Long, pageSize: Long): CommentPageResponse {
+        val commentResponses = commentRepository.findAll(articleId, (page - 1) * pageSize, pageSize).stream()
+            .map { CommentResponse.of(it) }
+            .toList()
+        val pageCount = commentRepository.count(articleId, PageLimitCalculator.calculatePageLimit(page, pageSize, 10L))
+        return CommentPageResponse.of(comments = commentResponses, commentCount = pageCount)
+    }
+
+    //무한스크룰
+    fun readAllInfinite(articleId: Long, lastParentCommentId: Long?, lastCommentId: Long?, limit: Long): List<CommentResponse> {
+        val comments = if (lastParentCommentId == null || lastCommentId == null) {
+            commentRepository.findAllInfiniteScroll(articleId, limit)
+        } else {
+            commentRepository.findAllInfiniteScroll(articleId, lastParentCommentId, lastCommentId, limit)
+        }
+        return comments.map { CommentResponse.of(it) }
+    }
+
 
     //하위 댓글이 있으면 완전삭제 x
     //하위 댓글이 없으면 완전삭제 o
