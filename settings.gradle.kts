@@ -9,6 +9,7 @@ include(
     "service:article-read",
     "storage:db",
     "common:snowflake",
+    "global"
 )
 
 pluginManagement {
