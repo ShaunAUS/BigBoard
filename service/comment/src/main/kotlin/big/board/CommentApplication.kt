@@ -1,4 +1,4 @@
-package big.board.comment
+package big.board
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

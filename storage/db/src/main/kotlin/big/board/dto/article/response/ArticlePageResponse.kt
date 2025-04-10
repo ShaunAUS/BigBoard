@@ -1,4 +1,4 @@
-package big.board.dto.response
+package big.board.dto.article.response
 
 class ArticlePageResponse(
     private val articles: List<ArticleResponse>,

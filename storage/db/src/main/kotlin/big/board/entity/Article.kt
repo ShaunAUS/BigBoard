@@ -1,7 +1,7 @@
 package big.board.entity
 
-import big.board.dto.request.ArticleCreateRequest
-import big.board.dto.request.ArticleUpdateRequest
+import big.board.dto.article.request.ArticleCreateRequest
+import big.board.dto.article.request.ArticleUpdateRequest
 import jakarta.persistence.Entity
 import jakarta.persistence.Id
 import java.time.LocalDateTime

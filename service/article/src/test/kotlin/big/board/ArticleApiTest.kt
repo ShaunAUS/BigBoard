@@ -1,14 +1,13 @@
 package big.board
 
-import big.board.dto.response.ArticlePageResponse
-import big.board.dto.response.ArticleResponse
+import big.board.dto.article.response.ArticlePageResponse
+import big.board.dto.article.response.ArticleResponse
 import org.junit.jupiter.api.Test
 import org.springframework.core.ParameterizedTypeReference
 import org.springframework.web.client.RestClient
 
 class ArticleApiTest {
     private val restClient = RestClient.create("http://localhost:9000")
-
     @Test
     fun createTest() {
         val response = create(

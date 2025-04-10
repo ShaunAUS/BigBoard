@@ -1,4 +1,4 @@
-package big.board.dto.request
+package big.board.dto.article.request
 
 data class ArticleCreateRequest(
     val title: String,

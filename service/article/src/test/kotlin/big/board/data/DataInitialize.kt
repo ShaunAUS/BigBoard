@@ -1,6 +1,6 @@
 package big.board.data
 
-import big.board.dto.request.ArticleCreateRequest
+import big.board.dto.article.request.ArticleCreateRequest
 import big.board.entity.Article
 import big.board.snowflake.Snowflake
 import jakarta.persistence.EntityManager

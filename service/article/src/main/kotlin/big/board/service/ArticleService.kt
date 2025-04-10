@@ -1,9 +1,9 @@
 package big.board.service
 
-import big.board.dto.request.ArticleCreateRequest
-import big.board.dto.request.ArticleUpdateRequest
-import big.board.dto.response.ArticlePageResponse
-import big.board.dto.response.ArticleResponse
+import big.board.dto.article.request.ArticleCreateRequest
+import big.board.dto.article.request.ArticleUpdateRequest
+import big.board.dto.article.response.ArticlePageResponse
+import big.board.dto.article.response.ArticleResponse
 import big.board.entity.Article
 import big.board.repository.ArticleRepository
 import big.board.snowflake.Snowflake

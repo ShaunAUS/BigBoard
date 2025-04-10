@@ -1,4 +1,4 @@
-package big.board.dto.response
+package big.board.dto.article.response
 
 import big.board.entity.Article
 import java.time.LocalDateTime

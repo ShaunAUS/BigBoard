@@ -1,9 +1,9 @@
 package big.board.controller
 
-import big.board.dto.request.ArticleCreateRequest
-import big.board.dto.request.ArticleUpdateRequest
-import big.board.dto.response.ArticlePageResponse
-import big.board.dto.response.ArticleResponse
+import big.board.dto.article.request.ArticleCreateRequest
+import big.board.dto.article.request.ArticleUpdateRequest
+import big.board.dto.article.response.ArticlePageResponse
+import big.board.dto.article.response.ArticleResponse
 import big.board.service.ArticleService
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -20,7 +20,8 @@ class ArticleController(
 ) {
 
     @GetMapping("/v1/articles/{articleId}")
-    fun getArticle(@PathVariable articleId: Long): ArticleResponse {
+    fun getArticle(@PathVariable("articleId") articleId: Long): ArticleResponse {
+        println("getArticle: $articleId")
         return articleService.read(articleId)
     }
 
@@ -49,11 +50,11 @@ class ArticleController(
     }
 
     @PutMapping("/v1/articles/{articleId}")
-    fun updateArticle(@PathVariable articleId: Long, @RequestBody request: ArticleUpdateRequest): ArticleResponse {
+    fun updateArticle(@PathVariable("articleId") articleId: Long, @RequestBody request: ArticleUpdateRequest): ArticleResponse {
         return articleService.update(articleId, request)
     }
     @DeleteMapping("/v1/articles/{articleId}")
-    fun deleteArticle(@PathVariable articleId: Long) {
+    fun deleteArticle(@PathVariable("articleId") articleId: Long) {
         articleService.delete(articleId)
     }
 }
