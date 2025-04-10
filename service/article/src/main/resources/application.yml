@@ -1,9 +1,9 @@
 spring:
   application:
-    name: big-board
+    name: article
   config:
     import:
-      - db.yml
+      - article.yml
 
 server:
   port: 9000
